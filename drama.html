@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drama Club Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("E:/Downloads/download (2).jpeg");
+      background-image: url("E:/Downloads/download (4).jpg");
+      margin: 0;
+      padding: 0;
+     
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+       background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("E:/Downloads/download (4).jpg"); /* Put your image in project2/images/bg.jpg */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-color:brown;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      text-align: center;
+      color: #555;
+      margin-bottom: 25px;
+      font-size: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  display: none; /* Hidden by default */
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1001;
+}
+
+#confetti-canvas {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Join the Drama Club</h2>
+    <p class="description">
+      Explore your creative side and step into the spotlight! Our Drama Club offers exciting opportunities to participate in stage performances, improv sessions, and classic theatre productions. Whether you're an experienced actor or just want to try something new, there's a role for everyone.
+    </p>
+
+    <form action="drama_register.php" method="POST">
+      <label>Full Name:</label>
+      <input type="text" name="full_name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Select Drama:</label>
+      <select name="drama_title" required>
+        <option value="">-- Select --</option>
+        <option value="Romeo and Juliet">Romeo and Juliet</option>
+        <option value="The Merchant of Venice">The Merchant of Venice</option>
+        <option value="Modern Improv Workshop">Modern Improv Workshop</option>
+        <option value="Annual Theatre Production">Annual Theatre Production</option>
+      </select>
+
+      <label>Preferred Slot:</label>
+      <input type="text" name="slot" placeholder="E.g. Monday 4PM - 5:30PM" required>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  
+
+
+</body>
+</html>
